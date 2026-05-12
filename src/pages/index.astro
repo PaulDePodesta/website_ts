@@ -1,0 +1,95 @@
+---
+import Hero from '../components/Hero.astro';
+import WorkAreas from '../components/WorkAreas.astro';
+import LinksGrid from '../components/LinksGrid.astro';
+import Identity from '../components/Identity.astro';
+import Stats from '../components/Stats.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
+import easterEggs from '../scripts/easter-eggs.js?raw';
+---
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#f6f3ee" />
+
+  <title>Tim Stäcker — Finance, Data Analytics & Systemdenken | Hamburg</title>
+  <meta name="description" content="Tim Stäcker aus Hamburg — Finance Analytics, Daten, Prozesse und Systeme. Masterarbeit: Nutzenpotenziale von maschinellem Lernen für moderne Ansätze zur Unternehmensbewertung. Football Finance Blog & Sport Analytics." />
+  <meta name="keywords" content="Tim Stäcker, Tim Staecker, Hamburg, Rosenheim, Finance Analytics, Data Analytics, Data Science, Controlling, Manager Finance Controlling, maschinelles Lernen, Unternehmensbewertung, Football Finance, Sport Analytics, Moneyball, Prozesse, Systeme, Business Valuation, Machine Learning" />
+  <meta name="author" content="Tim Stäcker" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://timstaecker.com/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="profile" />
+  <meta property="og:title" content="Tim Stäcker — Finance, Data Analytics & Systemdenken" />
+  <meta property="og:description" content="Tim Stäcker aus Hamburg — Finance Analytics, Daten, Prozesse und Systeme. Masterarbeit über maschinelles Lernen und Unternehmensbewertung. Football Finance Blog." />
+  <meta property="og:image" content="https://timstaecker.com/og-image.png" />
+  <meta property="og:url" content="https://timstaecker.com/" />
+  <meta property="og:locale" content="de_DE" />
+  <meta property="og:site_name" content="Tim Stäcker" />
+  <meta property="profile:first_name" content="Tim" />
+  <meta property="profile:last_name" content="Stäcker" />
+
+  <!-- Twitter / X Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Tim Stäcker — Finance, Data Analytics & Systemdenken" />
+  <meta name="twitter:description" content="Finance Analytics, Daten, Prozesse und Systeme. Hamburg. Football Finance." />
+  <meta name="twitter:image" content="https://timstaecker.com/og-image.png" />
+
+  <!-- Structured Data: Person -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Tim Stäcker",
+    "alternateName": "Tim Staecker",
+    "url": "https://timstaecker.com",
+    "sameAs": [
+      "https://www.linkedin.com/in/tim-st%C3%A4cker-23749b122/",
+      "https://github.com/PaulDePodesta/"
+    ],
+    "jobTitle": "Manager Finance & Controlling",
+    "description": "Analytischer Kopf. Systemdenker. Zahlenmensch mit Technikdrang. Finance Analytics, Daten, Prozesse und Systeme.",
+    "knowsAbout": [
+      "Data Analytics", "Finance", "Machine Learning", "Unternehmensbewertung",
+      "Football Analytics", "Sport Analytics", "Moneyball", "Business Valuation",
+      "Prozessoptimierung", "Datenmodellierung"
+    ],
+    "address": [
+      { "@type": "PostalAddress", "addressLocality": "Hamburg", "addressCountry": "DE" },
+      { "@type": "PostalAddress", "addressLocality": "Rosenheim", "addressCountry": "DE" }
+    ],
+    "hasCredential": {
+      "@type": "EducationalOccupationalCredential",
+      "name": "Nutzenpotenziale von maschinellem Lernen für moderne Ansätze zur Unternehmensbewertung"
+    }
+  }
+  </script>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+  <!-- Umami Analytics -->
+  <script defer src="https://analytics.moneyball-stats.com/script.js" data-website-id="7d0f6a95-422e-45c7-a55a-676417a84660"></script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <span class="monogram" title="Tim Stäcker" aria-label="Tim Stäcker — Monogramm">T&thinsp;|&thinsp;S</span>
+  </header>
+
+  <main id="main">
+    <Hero />
+    <Identity />
+    <WorkAreas />
+    <LinksGrid />
+    <Stats />
+  </main>
+
+  <Footer />
+
+  <script is:inline set:html={easterEggs}></script>
+</body>
+</html>
