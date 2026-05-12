@@ -28,15 +28,19 @@
 
     <div class="hero-visual">
       <div class="hero-image-wrap">
-        <img
-          src="/elphi-hero.png"
-          alt="Elbphilharmonie am Hamburger Hafen"
-          class="hero-img"
-          width="600"
-          height="520"
-          loading="eager"
-          decoding="sync"
-        />
+        <picture>
+          <source srcset="/elphi-hero.webp" type="image/webp" />
+          <img
+            src="/elphi-hero.png"
+            alt="Elbphilharmonie am Hamburger Hafen"
+            class="hero-img"
+            width="600"
+            height="520"
+            loading="eager"
+            decoding="sync"
+            fetchpriority="high"
+          />
+        </picture>
       </div>
     </div>
   </div>
