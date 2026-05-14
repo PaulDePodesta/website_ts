@@ -209,7 +209,7 @@ section {
   text-transform: uppercase;
   color: var(--soft-muted);
   margin-top: 0.25rem;
-  animation: scroll-pulse 2.8s ease-in-out infinite;
+  animation: scroll-pulse 3.6s cubic-bezier(0.45, 0, 0.55, 1) infinite;
 }
 
 .hero-scroll svg {
@@ -219,8 +219,9 @@ section {
 }
 
 @keyframes scroll-pulse {
-  0%, 100% { opacity: 0.5; transform: translateY(0); }
-  50% { opacity: 1; transform: translateY(3px); }
+  0%, 100% { opacity: 0.45; transform: translateY(0); }
+  40%       { opacity: 0.9;  transform: translateY(2px); }
+  60%       { opacity: 0.9;  transform: translateY(2px); }
 }
 
 .hero-quote {
